@@ -1,0 +1,515 @@
+[
+    {
+        "id": 1,
+        "proizvodjacId": 1,
+        "slika": {
+            "src": "assets/img/laptop/laptop1.png",
+            "alt": "laptop 1"
+        },
+        "cena": {
+            "staraCena": 77779,
+            "trenutnaCena": 69999
+        },
+        "nazivProizvoda": "LENOVO IdeaPad 3 15ALC6 - 82KU00R5YA",
+        "naStanju": true,
+        "akcija": true,
+        "specifikacije": {
+            "dijagonala": 15.6,
+            "ram": 8,
+            "procesor": {
+                "proizvodjacProcesoraId": 1, 
+                "modelProcesora": "AMD Lucienne Ryzen 5 Hexa Core Processor 5500U"
+            },
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 1,
+                "nazivGrafickeKartice": "Integrisana AMD Radeon"
+            },
+            "storage": {
+                "ssd": 512,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 2,
+        "proizvodjacId": 1,
+        "slika": {
+            "src": "assets/img/laptop/laptop2.png",
+            "alt": "laptop 2"
+        },
+        "cena": {
+            "staraCena": 239999,
+            "trenutnaCena": 209999
+        },
+        "nazivProizvoda": "LENOVO Legion 5 Pro 16ARH7H - 82RG00C2YA",
+        "naStanju": true,
+        "akcija": true,
+        "specifikacije": {
+            "dijagonala": 16,
+            "ram": 16,
+            "procesor": {
+                "proizvodjacProcesoraId": 1, 
+                "modelProcesora": "AMD Ryzen 7 6800H do 4.70 GHz"
+            },
+            "grafickaKartica": {
+                "integrisana": false,
+                "proizvodjacGrafickeKarticeId": 1,
+                "nazivGrafickeKartice": "nVidia GeForce RTX 3060 sa 6GB DDR6 sopstvene memorije"
+            },
+            "storage": {
+                "ssd": 1024,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 3,
+        "proizvodjacId": 1,
+        "slika": {
+            "src": "assets/img/laptop/laptop3.png",
+            "alt": "laptop 3"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 49999
+        },
+        "nazivProizvoda": "LENOVO V15 G2 ALC - 82KD000AYA",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 15.6,
+            "ram": 4,
+            "procesor": {
+                "proizvodjacProcesoraId": 1, 
+                "modelProcesora": "AMD Lucienne Ryzen 3 5300U do 3.8GHz"
+            },
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 1,
+                "nazivGrafickeKartice": "Integrisana AMD Radeon"
+            },
+            "storage": {
+                "ssd": 256,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 4,
+        "proizvodjacId": 1,
+        "slika": {
+            "src": "assets/img/laptop/laptop4.png",
+            "alt": "laptop 4"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 89999
+        },
+        "nazivProizvoda": "LENOVO IdeaPad Gaming 3 15ACH6 - 82K201GRRM",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 15.6,
+            "ram": 8,
+            "procesor": {
+                "proizvodjacProcesoraId": 1, 
+                "modelProcesora": "AMD Cezanne Ryzen 5 5600H do 4.2GHz"
+            },
+            "grafickaKartica": {
+                "integrisana": false,
+                "proizvodjacGrafickeKarticeId": 3,
+                "nazivGrafickeKartice": "GeForce GTX 1650"
+            },
+            "storage": {
+                "ssd": 512,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 5,
+        "proizvodjacId": 2,
+        "slika": {
+            "src": "assets/img/laptop/laptop5.jpg",
+            "alt": "laptop 5"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 436799
+        },
+        "nazivProizvoda": "APPLE MacBook Pro 16 M2 Pro 16GB/1TB Silver MNWD3ZE/A",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 16.2,
+            "ram": 16,
+            "procesor": {
+                "proizvodjacProcesoraId": 3, 
+                "modelProcesora": "Apple M2 Pro"
+            },
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 4,
+                "nazivGrafickeKartice": "Integrisana Apple M2 Pro"
+            },
+            "storage": {
+                "ssd": 1024,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 6,
+        "proizvodjacId": 2,
+        "slika": {
+            "src": "assets/img/laptop/laptop6.png",
+            "alt": "laptop 6"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 161199
+        },
+        "nazivProizvoda": "APPLE MacBook Air 13 Retina Silver MGN93ZEA",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 13.3,
+            "ram": 8,
+            "procesor": {
+                "proizvodjacProcesoraId": 3, 
+                "modelProcesora": "Apple M1 do 3.2GHz"
+            },
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 4,
+                "nazivGrafickeKartice": "Integrisana Apple M1"
+            },
+            "storage": {
+                "ssd": 256,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 7,
+        "proizvodjacId": 2,
+        "slika": {
+            "src": "assets/img/laptop/laptop7.png",
+            "alt": "laptop 7"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 200599
+        },
+        "nazivProizvoda": "APPLE MacBook Air M2 Midnight 8/256GB - MLY33ZE/A",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 13.6,
+            "ram": 8,
+            "procesor": {
+                "proizvodjacProcesoraId": 3, 
+                "modelProcesora": "Apple M2"
+            },
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 4,
+                "nazivGrafickeKartice": "Integrisana Apple M2"
+            },
+            "storage": {
+                "ssd": 256,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 8,
+        "proizvodjacId": 2,
+        "slika": {
+            "src": "assets/img/laptop/laptop8.png",
+            "alt": "laptop 8"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 234999
+        },
+        "nazivProizvoda": "APPLE MacBook Air M2 Space Gray 8/512GB - MLXW3ZE/A",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 13.6,
+            "ram": 8,
+            "procesor": {
+                "proizvodjacProcesoraId": 3, 
+                "modelProcesora": "Apple M2"
+            },
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 4,
+                "nazivGrafickeKartice": "Integrisana Apple M2"
+            },
+            "storage": {
+                "ssd": 512,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 9,
+        "proizvodjacId": 5,
+        "slika": {
+            "src": "assets/img/laptop/laptop9.png",
+            "alt": "laptop 9"
+        },
+        "cena": {
+            "staraCena": 211109,
+            "trenutnaCena": 189999
+        },
+        "nazivProizvoda": "ACER Nitro 5 AN515-57-98GP i9/16/512 NH.QEWEX.00C",
+        "naStanju": true,
+        "akcija": true,
+        "specifikacije": {
+            "dijagonala": 15.6,
+            "ram": 16,
+            "procesor": {
+                "proizvodjacProcesoraId": 2, 
+                "modelProcesora": "Intel Core i9 11900H do 4.9 GHz"
+            },
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 3,
+                "nazivGrafickeKartice": "GeForce RTX 3060"
+            },
+            "storage": {
+                "ssd": 512,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 10,
+        "proizvodjacId": 4,
+        "slika": {
+            "src": "assets/img/laptop/laptop10.png",
+            "alt": "laptop 10"
+        },
+        "cena": {
+            "staraCena": 41999,
+            "trenutnaCena": 31999
+        },
+        "nazivProizvoda": "HP 15s-fq3004nm 4Q629EA",
+        "naStanju": true,
+        "akcija": true,
+        "specifikacije": {
+            "dijagonala": 15.6,
+            "ram": 4,
+            "procesor": {
+                "proizvodjacProcesoraId": 2, 
+                "modelProcesora": "Intel Celeron N4500 do 2.8GHz"
+            },  
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 2,
+                "nazivGrafickeKartice": "Integrisana UHD Graphics (Jasper Lake 16 EU)"
+            },
+            "storage": {
+                "ssd": 512,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 11,
+        "proizvodjacId": 4,
+        "slika": {
+            "src": "assets/img/laptop/laptop11.jpg",
+            "alt": "laptop 11"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 99999
+        },
+        "nazivProizvoda": "HP 15s-eq3009nm - 65C50EA",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 15.6,
+            "ram": 16,
+            "procesor": {
+                "proizvodjacProcesoraId": 1, 
+                "modelProcesora": "AMD Ryzen 7 5825U do 4.5GHz"
+            },  
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 1,
+                "nazivGrafickeKartice": "Integrisana AMD Radeon"
+            },
+            "storage": {
+                "ssd": 512,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 12,
+        "proizvodjacId": 3,
+        "slika": {
+            "src": "assets/img/laptop/laptop13.png",
+            "alt": "laptop 13"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 179999
+        },
+        "nazivProizvoda": "DELL G15 5520",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 15.6,
+            "ram": 8,   
+            "procesor": {
+                "proizvodjacProcesoraId": 2, 
+                "modelProcesora": "Intel Core i5-12500H do 4.5GHz"
+            },  
+            "grafickaKartica": {
+                "integrisana": true,
+                "proizvodjacGrafickeKarticeId": 3,
+                "nazivGrafickeKartice": "GeForce RTX 3050 Ti"
+            },
+            "storage": {
+                "ssd": 512,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 13,
+        "proizvodjacId": 3,
+        "slika": {
+            "src": "assets/img/laptop/laptop12.png",
+            "alt": "laptop 12"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 109000
+        },
+        "nazivProizvoda": "DELL Inspiron 5402",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 15.6,
+            "ram": 16,
+            "procesor": {
+                "proizvodjacProcesoraId": 2, 
+                "modelProcesora": "Intel Core i7-1165G7 do 4.7GHz"
+            },  
+            "grafickaKartica": {
+                "integrisana": false,
+                "proizvodjacGrafickeKarticeId": 3,
+                "nazivGrafickeKartice": "GeForce RTX 3050 Ti"
+            },
+            "storage": {
+                "ssd": 512,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 14,
+        "proizvodjacId": 5,
+        "slika": {
+            "src": "assets/img/laptop/laptop14.png",
+            "alt": "laptop 14"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 39999
+        },
+        "nazivProizvoda": "ACER Aspire A315 i3/4/256 NX.HS5EX.00W",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 15.6,
+            "ram": 4,
+            "procesor": {
+                "proizvodjacProcesoraId": 2, 
+                "modelProcesora": "Intel Core i3 1005G1 do 3.4GHz"
+            },  
+            "grafickaKartica": {
+                "integrisana": false,
+                "proizvodjacGrafickeKarticeId": 2,
+                "nazivGrafickeKartice": "Integrisana UHD G1"
+            },
+            "storage": {
+                "ssd": 256,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 15,
+        "proizvodjacId": 5,
+        "slika": {
+            "src": "assets/img/laptop/laptop15.png",
+            "alt": "laptop 15"
+        },
+        "cena": {
+            "staraCena": 411109,
+            "trenutnaCena": 369999
+        },
+        "nazivProizvoda": "ACER Predator Triton 300 SE i7/32/1TB NH.QGKEX.007",
+        "naStanju": true,
+        "akcija": true,
+        "specifikacije": {
+            "dijagonala": 16,
+            "ram": 32,
+            "procesor": {
+                "proizvodjacProcesoraId": 2, 
+                "modelProcesora": "Intel Core i7-12700H do 4.7GHz"
+            },  
+            "grafickaKartica": {
+                "integrisana": false,
+                "proizvodjacGrafickeKarticeId": 3,
+                "nazivGrafickeKartice": "GeForce RTX 3070 Ti"
+            },
+            "storage": {
+                "ssd": 1024,
+                "hdd": 0
+            }
+        }
+    },
+    {
+        "id": 16,
+        "proizvodjacId": 1,
+        "slika": {
+            "src": "assets/img/laptop/laptop16.png",
+            "alt": "laptop 16"
+        },
+        "cena": {
+            "staraCena": 0,
+            "trenutnaCena": 439999
+        },
+        "nazivProizvoda": "LENOVO Legion 7 16IAX7 - 82TD005VYA",
+        "naStanju": true,
+        "akcija": false,
+        "specifikacije": {
+            "dijagonala": 16,
+            "ram": 16,
+            "procesor": {
+                "proizvodjacProcesoraId": 2, 
+                "modelProcesora": "Intel Core i7-12800HX do 4.80 GHz"
+            },  
+            "grafickaKartica": {
+                "integrisana": false,
+                "proizvodjacGrafickeKarticeId": 3,
+                "nazivGrafickeKartice": "GeForce RTX 3070 Ti"
+            },
+            "storage": {
+                "ssd": 2048,
+                "hdd": 0
+            }
+        }
+    }
+     
+]

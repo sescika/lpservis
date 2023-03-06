@@ -1,0 +1,18 @@
+[
+    {
+        "vrednost": "naziv-asc",
+        "naziv": "Po nazivu A-Z"
+    },
+    {
+        "vrednost": "naziv-desc",
+        "naziv": "Po nazivu Z-A"
+    },
+    {
+        "vrednost": "cena-asc",
+        "naziv": "Po ceni Rastuće"
+    },
+    {
+        "vrednost": "cena-desc",
+        "naziv": "Po ceni Opadajuće"
+    }
+]

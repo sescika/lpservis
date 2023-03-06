@@ -1,0 +1,74 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    margin: 0px auto;
+    width: 85%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#btnOsveziKorpu {
+    width: 120px;
+
+}
+
+#btnNazad {
+    width: 120px;
+
+}
+
+.fakeHeight {
+    min-height: 75vh;
+}
+header {
+    nav {
+        a.navbar-brand{
+            font-size: 28px;
+        }
+
+        .collapse {
+            ul {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+section {
+#products {
+    .row {
+        .product {  
+            width: 18rem;
+            .card-body {
+                h5 {
+                    font-size: 16px;
+                }
+                .price {
+                    p.staraCena{
+                        font-size: 12px;
+                    }
+                    p.trenutnaCena {
+                        font-size: 20px;
+                    }
+                }
+            }   
+        }
+    }
+}
+
+
+}
+.slika-korpa {
+    width: 135px;
+}
+
+/* footer */
+

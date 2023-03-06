@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "imeProizvodjaca": "AMD"
+    },
+    {
+        "id": 2,
+        "imeProizvodjaca": "Intel"
+    },
+    {
+        "id": 3,
+        "imeProizvodjaca": "Apple"
+    }
+]

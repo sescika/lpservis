@@ -1,0 +1,32 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://sescika.github.io/lpservis/index.html</loc>
+        <lastmod> 2023-03-06 </lastmod>
+        <changefreq>daily</changefreq>
+        <priority> 1 </priority>
+    </url>
+    <url>
+        <loc>https://sescika.github.io/lpservis/products.html</loc>
+        <lastmod> 2023-03-06 </lastmod>
+        <changefreq>weekly</changefreq>
+        <priority> 0.95 </priority>
+    </url>
+    <url>
+        <loc>https://sescika.github.io/lpservis/contact.html</loc>
+        <lastmod> 2023-03-06 </lastmod>
+        <changefreq>monthly</changefreq>
+        <priority> 0.5 </priority>
+    </url>
+    <url>
+        <loc>https://sescika.github.io/lpservis/author.html</loc>
+        <lastmod> 2023-03-06 </lastmod>
+        <changefreq>monthly</changefreq>
+        <priority> 0.5 </priority>
+    </url>
+    <url>
+        <loc>https://sescika.github.io/lpservis/cart.html</loc>
+        <lastmod> 2023-03-06 </lastmod>
+        <changefreq>monthly</changefreq>
+        <priority> 0.5 </priority>
+    </url>
+</urlset>

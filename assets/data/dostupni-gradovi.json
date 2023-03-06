@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "imeGrada": "Begorad"
+    },
+    {
+        "id": 2,
+        "imeGrada": "Novi Sad"
+    },
+    {
+        "id": 3,
+        "imeGrada": "Niš"
+    },
+    {
+        "id": 4,
+        "imeGrada": "Valjevo"
+    },
+    {
+        "id": 5,
+        "imeGrada": "Kragujevac"
+    }
+]

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="lp Proizvodi." />
+    <meta name="keywords" content="laptop, prodaja, akcija, racunari" />
+    <meta name="author" content="Lazar Pelanovic" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" /> 
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <title>LP servis - Proizvodi</title>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/20e4f2537d.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+     
+</head>
+<body>
+
+    <header class="bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark wrapper">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">LP servis </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">          
+                </div>
+            </div>
+        </nav>
+    </header>
+  
+    <section>
+        <div class="container-fluid wrapper my-3">
+            <div class="row border rounded p-3 d-flex justify-content-between" id="searchRow">
+                <div class="col-lg-3 col-6">
+                    <div class="input-group">
+                        <input class='form-control' type="text" name="tbSearch" id="tbSearch" placeholder="Pretraga" />
+                        <button type="button" class="btn btn-secondary" id="btnSearch"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button type="button" class="btn btn-primary" id="btnClearSearch"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6" id="ddlSortDiv">
+
+                </div>
+            </div>
+            <div class="row">
+                <div id="filters" class="px-0 my-3 col-lg-2 col-12">    
+                </div>
+                <div id="products" class="col-lg-10 col-12 container-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="position-relative"> 
+        <div class="position-fixed bottom-0 rounded end-0" id="liveAlertPlaceholder"></div>
+    </div>
+
+    <footer class="text-light bg-dark">
+        <div class="container wrapper">
+            <div class="row align-items-center py-3">
+                <div class="col-lg-3 col-6">
+                  <label for="tbEmailNl" class="col-form-label">Prijavite se na naš newsletter:</label>
+                </div>
+                <div class="col-lg-3 col-6 container">
+                    <div class="row">
+                        <div class="col d-flex">
+                            <input type="email" id="tbEmailNl" name="tbEmailNl" class="form-control" placeholder="petar.petrovic@gmail.com"/>
+                            <button class="btn btn-success" id="btnPrijavaNl">Prijava</button></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><span id="emailNlErr" class="text-danger"></span></div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6" id="footerNavbar">    
+                </div>
+                <div class="col-lg-3 col-6" id="footerLinks">  
+                </div>
+            </div>
+            <hr />
+            <div class="row py-3">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <h4>Lazar Pelanović 2023 &copy;</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

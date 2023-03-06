@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "imeProizvodjaca": "Lenovo"
+    },
+    {
+        "id": 2,
+        "imeProizvodjaca": "Apple"
+    },
+    {
+        "id": 3,
+        "imeProizvodjaca": "Dell"
+    },
+    {
+        "id": 4,
+        "imeProizvodjaca": "HP"
+    },
+    {
+        "id": 5,
+        "imeProizvodjaca": "Acer"
+    }
+]
