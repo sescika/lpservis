@@ -252,7 +252,7 @@ function ispisSlider(nizProizvoda) {
 }
 //#endregion
 
-//#region prodcurts
+//#region products
 function onPromena(){
     let proizvodi = lsGet("proizvodi");
     ispisProizvoda(proizvodi);
@@ -298,8 +298,8 @@ function ispisProizvoda(nizProizvoda) {
 }
 
 function ispisGrupeFilterCheckboxova(nizSaOpcijama, nazivFiltera, idFiltera, klasaFiltera) {
-    html = `<div class='aside border rounded p-2 mb-3' id='${idFiltera}'>
-                <h5 class='aside-title'>${nazivFiltera}</h5>
+    html = `<div class='border rounded p-2 mb-3' id='${idFiltera}'>
+                <h5>${nazivFiltera}</h5>
                     <hr />
                     `;
     let br=1;
@@ -308,7 +308,7 @@ function ispisGrupeFilterCheckboxova(nizSaOpcijama, nazivFiltera, idFiltera, kla
     html += `<div class='mb-2'>
                 <input class="form-check-input mt-0 ${klasaFiltera}" type="checkbox" value='${br}' id='${idFiltera+br}' /> 
                 <label for='${idFiltera+br}'>${opcija.imeProizvodjaca}</label>
-                </div>`;
+            </div>`;
     br++;
 }
 html += "</div>";
@@ -593,7 +593,7 @@ function addToCart(id, brojStavki) {
         
         korpa.forEach(p => {
             if(p.id == xd.id) {
-                alert("Proizvod je vec u korpi.", "danger");
+                alert("Proizvod je već u korpi.", "danger");
             } 
         })
     }
@@ -692,8 +692,8 @@ function proveraForme(e) {
     let formaTextArea = $("#taOpis").val();
     let formaCb = document.getElementById("cbTos").checked;
 
-    let tbUserErrorSpan = document.getElementById("tbEmailError");
-    let tbEmailErrorSpan = document.getElementById("tbUserError");
+    let tbUserErrorSpan = document.getElementById("tbUserError");
+    let tbEmailErrorSpan = document.getElementById("tbEmailError");
     let ddlGradoviErrorSpan = document.getElementById("ddlGradoviError");
     let ddlProizvodjaciErrorSpan = document.getElementById("ddlProizvodjaciError");
     let textAreaErrorSpan = document.getElementById("taError");
@@ -709,7 +709,6 @@ function proveraForme(e) {
         greske.push("greska user");
     } else {
         tbUserErrorSpan.innerHTML = "";
-
     }
 
     if(!emailRegex.test(formaEmail)) {
