@@ -1,3 +1,4 @@
+//#region general
 var url = window.location.pathname;
 url = url.substring(url.lastIndexOf('/'));
 
@@ -5,8 +6,9 @@ window.onload = function (){
     brProizvodaUkorpi();
     if(url == "/" || url == "/index.html") {
         ajaxCallback('proizvodi.json', function(result) {  
-            ispisSlider(result);
+
             ispisDijagnostika();
+            ispisSlider(result);
             ispisPodrska();
         })
     }
@@ -112,7 +114,7 @@ function prikazNav(navArrHref, navArrTitle, elementToAdd, gde) {
                     </li>`;
             }
         
-        html += `   <a href='cart.html' class='btn border text-light ms-3'>
+        html += `   <a href='cart.html' class='btn border text-light ms-0 ms-lg-3'>
                         <i class='fa-solid fa-cart-shopping'></i>
                         <span id='cartItemsCounter'></span>
                     </a>
@@ -149,7 +151,9 @@ prikazNav(navNizHref, navNizTitle, navfooter, "footer");
 prikazIkonice(footerKlaseIkonice, footerTitles, footerHref, navFooterIcons);
 //#endregion
 
-//#region ispis index   
+//#endregion
+
+//#region index   
 
 function ispisDijagnostika() {
     let html = `<div class="row">
@@ -171,7 +175,7 @@ function ispisDijagnostika() {
 
 function ispisPodrska() {
     let html = `<div class="row">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6 mb-3">
                         <h3>Besplatna tehnička podrška</h3>
                         <hr>
                         <p>Od početka ove godine smo unapredili tehničku podršku za sve laptop uredjaje 24 časa. Ukoliko imate bilo kakvih pitanja u vezi vašeg laptopa Apple HP Asus Acer Lenovo ili nekog drugog proizvođača pozovite naše laptop tehničare za pomoć.</p>
@@ -210,7 +214,7 @@ function ispisSlider(nizProizvoda) {
     let nizProizvodaAkcija = nizProizvodaNaAkciji(nizProizvoda);
 
     let html = `
-    <h3 class='text-center text-warning py-3'>Pogledajte neke od proizvoda na akciji</h3>
+    <h3 class='text-center text-warning py-2'>Pogledajte neke od proizvoda na akciji</h3>
     <hr />
     <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -248,7 +252,7 @@ function ispisSlider(nizProizvoda) {
 }
 //#endregion
 
-//#region ispis proizvoda
+//#region prodcurts
 function onPromena(){
     let proizvodi = lsGet("proizvodi");
     ispisProizvoda(proizvodi);
@@ -301,15 +305,15 @@ function ispisGrupeFilterCheckboxova(nizSaOpcijama, nazivFiltera, idFiltera, kla
     let br=1;
 
     for(let opcija of nizSaOpcijama) {
-        html += `<div class='mb-2'>
-                    <input class="form-check-input mt-0 ${klasaFiltera}" type="checkbox" value='${br}' id='${idFiltera+br}' /> 
-                    <label for='${idFiltera+br}'>${opcija.imeProizvodjaca}</label>
-                    </div>`;
-        br++;
-    }
-    html += "</div>";
+    html += `<div class='mb-2'>
+                <input class="form-check-input mt-0 ${klasaFiltera}" type="checkbox" value='${br}' id='${idFiltera+br}' /> 
+                <label for='${idFiltera+br}'>${opcija.imeProizvodjaca}</label>
+                </div>`;
+    br++;
+}
+html += "</div>";
 
-    document.getElementById("filters").innerHTML += html;
+document.getElementById("filters").innerHTML += html;
 }
 
 function ispisDDl(nizOpcija, idListe, idDiv, tip){
@@ -330,7 +334,7 @@ function ispisDDl(nizOpcija, idListe, idDiv, tip){
                         
                     }
                 html += `</select>
-           `;
+        `;
 
     document.querySelector(`#${idDiv}`).innerHTML += html;
 }
@@ -348,8 +352,6 @@ function lsSet(naziv, vrednost){
 function lsGet(naziv){
     return JSON.parse(localStorage.getItem(naziv));
 }
-
-//#endregion
 
 //#region filter funkcije
 
@@ -403,6 +405,12 @@ function searchProizvodi(nizProizvoda) {
     })
 }
 
+function clearTb() {
+    let nizProizvoda = lsGet("proizvodi");
+    document.getElementById("tbSearch").value = "";
+    ispisProizvoda(nizProizvoda);
+}
+
 function filterGraficke(nizProizvoda) {
     let cekiraniProizvodjaciGrafickih = [];
     for (let i = 0; i < $(".input-graficke:checked").length; i++)
@@ -430,15 +438,10 @@ function filterProizvodjaci(nizProizvoda) {
     return nizProizvoda;
 }
 
-function clearTb() {
-    let nizProizvoda = lsGet("proizvodi");
-    document.getElementById("tbSearch").value = "";
-    ispisProizvoda(nizProizvoda);
-}
-
+//#endregion
 //#endregion
 
-//#region korpa
+//#region cart
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
 
 const alert = (message, type) => {
@@ -451,62 +454,6 @@ const alert = (message, type) => {
   ].join('')
 
   alertPlaceholder.append(wrapper);
-}
-
-let proizvodiUnutarKorpe = [];
-function addToCart(id, brojStavki) {
-    if (brojStavki == undefined)
-        brojStavki = 1;
-
-    if (!localStorage.getItem("korpa")) {
-        dodajPrviProizvod(id);
-        brProizvodaUkorpi();
-    }
-    else {
-        let korpa = lsGet("korpa");
-        let xd = korpa.find(x => x.id == id)
-        if (!xd) {
-            dodajNoviProizvod(id);
-            brProizvodaUkorpi();
-        }
-        else {
-            daLiJeUKorpi(id);
-        }
-    }
-
-    function dodajPrviProizvod(idProduct) {
-        let zaKorpu = ({
-            id: idProduct,
-            kolicina: brojStavki
-        })
-        proizvodiUnutarKorpe.push(zaKorpu);
-        alert("Proizvod dodat u korpu.", "success");
-        lsSet("korpa", proizvodiUnutarKorpe);
-        brProizvodaUkorpi();
-    }
-
-    function dodajNoviProizvod(idProduct) {
-        let zaKorpu = ({
-            id: idProduct,
-            kolicina: brojStavki
-        })
-        let korpa = lsGet("korpa");
-        korpa.push(zaKorpu);
-        brProizvodaUkorpi();
-        alert("Proizvod dodat u korpu.", "success");
-        lsSet("korpa", korpa);
-    }
-
-    function daLiJeUKorpi(idProduct) {
-        let korpa = lsGet("korpa");
-        let xd = korpa.find(x => x.id == idProduct);
-        
-        korpa.forEach(p => {
-            if(p.id == xd.id) {
-                alert("Proizvod je vec u korpi.", "danger");
-            } 
-        })
-    }
 }
 
 function ispisPrazneKorpe() {
@@ -589,14 +536,68 @@ function ispisDivFinalnaCena(cena) {
         document.getElementById("divfinalno").classList.remove("d-none");
         let html = `
         <h2>Ukupna cena:</h2>
-        <span id="cenaTotal" class='fs-3'>${obradaCene(cena)}</span>
+        <span id="cenaTotal" class='fs-3 fw-bold'>${obradaCene(cena)}</span>
         <button id="btnPoruci" class="btn btn-success">Poručite</button> `;
         
         document.getElementById("divfinalno").innerHTML = html;
 
 }
 
+let proizvodiUnutarKorpe = [];
+function addToCart(id, brojStavki) {
+    if (brojStavki == undefined)
+        brojStavki = 1;
 
+    if (!localStorage.getItem("korpa")) {
+        dodajPrviProizvod(id);
+        brProizvodaUkorpi();
+    }
+    else {
+        let korpa = lsGet("korpa");
+        let xd = korpa.find(x => x.id == id)
+        if (!xd) {
+            dodajNoviProizvod(id);
+            brProizvodaUkorpi();
+        }
+        else {
+            daLiJeUKorpi(id);
+        }
+    }
+
+    function dodajPrviProizvod(idProduct) {
+        let zaKorpu = ({
+            id: idProduct,
+            kolicina: brojStavki
+        })
+        proizvodiUnutarKorpe.push(zaKorpu);
+        alert("Proizvod dodat u korpu.", "success");
+        lsSet("korpa", proizvodiUnutarKorpe);
+        brProizvodaUkorpi();
+    }
+
+    function dodajNoviProizvod(idProduct) {
+        let zaKorpu = ({
+            id: idProduct,
+            kolicina: brojStavki
+        })
+        let korpa = lsGet("korpa");
+        korpa.push(zaKorpu);
+        brProizvodaUkorpi();
+        alert("Proizvod dodat u korpu.", "success");
+        lsSet("korpa", korpa);
+    }
+
+    function daLiJeUKorpi(idProduct) {
+        let korpa = lsGet("korpa");
+        let xd = korpa.find(x => x.id == idProduct);
+        
+        korpa.forEach(p => {
+            if(p.id == xd.id) {
+                alert("Proizvod je vec u korpi.", "danger");
+            } 
+        })
+    }
+}
 
 function izbrisiProizvod(id) {
     let proizvodi = lsGet('korpa');
@@ -607,6 +608,27 @@ function izbrisiProizvod(id) {
     brProizvodaUkorpi();
     ispisKorpe();  
 }
+
+function brProizvodaUkorpi() {
+    let korpa = lsGet("korpa");
+
+    if(korpa == null) {
+
+        document.getElementById("cartItemsCounter").innerHTML = 0; 
+        return 0;   
+    }
+    else {
+        let br=0;
+        korpa.forEach(p => {
+            br++;
+        })
+     
+        document.getElementById("cartItemsCounter").innerHTML = br;    
+        return br;
+    }
+
+}
+
 
 function povecaj(id) {  
     let proizvodi = lsGet('korpa');
@@ -644,29 +666,9 @@ function osveziKorpu() {
     ispisKorpe();
 }
 
-function brProizvodaUkorpi() {
-    let korpa = lsGet("korpa");
-
-    if(korpa == null) {
-
-        document.getElementById("cartItemsCounter").innerHTML = 0; 
-        return 0;   
-    }
-    else {
-        let br=0;
-        korpa.forEach(p => {
-            br++;
-        })
-     
-        document.getElementById("cartItemsCounter").innerHTML = br;    
-        return br;
-    }
-
-}
-
 //#endregion
 
-//#region contact
+//#region contact   
 
 function ispisKontakt() {
     let html = `
@@ -676,27 +678,7 @@ function ispisKontakt() {
                 
     document.getElementById("contactinfo").innerHTML = html;
 }
-
-
-
-//#endregion
-
 //#region ispitivanje elemenata forme
-
-function ispitajEmail(vrednostMaila, spanZaIspisGreske) {
-   
-    let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-    if(!emailRegex.test(vrednostMaila)) {
-        spanZaIspisGreske.innerHTML = "Pogresan format emaila. primer: petar.petrovic@gmail.com";
-    } else {
-        spanZaIspisGreske.classList.remove("text-danger");
-        spanZaIspisGreske.classList.add("text-success");
-        spanZaIspisGreske.innerHTML = "email poslat!";
-    }
-}
-
-
 function proveraForme(e) {
 
     e.preventDefault();
@@ -779,6 +761,18 @@ function proveraForme(e) {
     }
 }
 
+function ispitajEmail(vrednostMaila, spanZaIspisGreske) {
+   
+    let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if(!emailRegex.test(vrednostMaila)) {
+        spanZaIspisGreske.innerHTML = "Pogresan format emaila. primer: petar.petrovic@gmail.com";
+    } else {
+        spanZaIspisGreske.classList.remove("text-danger");
+        spanZaIspisGreske.classList.add("text-success");
+        spanZaIspisGreske.innerHTML = "email poslat!";
+    }
+}
 
 let btnPrijavaNl = document.getElementById("btnPrijavaNl");
 btnPrijavaNl.addEventListener("click", function() {
@@ -786,5 +780,9 @@ btnPrijavaNl.addEventListener("click", function() {
     let spanErr = document.getElementById("emailNlErr");
     ispitajEmail(nlEmailValue, spanErr);
 });
+//#endregion
+
+
+
 //#endregion
 

@@ -45,6 +45,15 @@ section #products .row .product .card-body .price p.trenutnaCena {
   font-size: 20px;
 }
 
+#cover {
+  background-image: url("../img/cover.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .slika-korpa {
   width: 135px;
 }
