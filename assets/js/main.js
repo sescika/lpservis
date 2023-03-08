@@ -478,7 +478,7 @@ function ispisKorpe() {
         ispisPrazneKorpe();
     }
     else {
-        html = `<table class="table table-striped border">
+        html = `<table class="table table-striped d-block d-lg-table border overflow-x-auto ">
         <thead class="table-header text-light bg-dark text-center">
             <tr>
                 <th> </th>
@@ -496,12 +496,12 @@ function ispisKorpe() {
                 if(proizvod.id == p.id) {
                     html+= ` <tr>
                                 <td>
-                                    <img class="img-fluid slika-korpa" src="${proizvod.slika.src}" alt="${proizvod.slika.alt}" />
+                                    <img class="d-none d-md-block img-fluid slika-korpa" src="${proizvod.slika.src}" alt="${proizvod.slika.alt}" />
                                 </td>
                                 <td class="align-middle text-center">${proizvod.nazivProizvoda}</td>
                                 <td class="align-middle text-center" id="cenaKomad${p.id}">${obradaCene(proizvod.cena.trenutnaCena)}</td>
                                 <td class="align-middle text-center">
-                                    <div class="cartKolicina">
+                                    <div class="cartKolicina d-flex">
                                         <button id="smanji${p.id}" onclick="smanji(${p.id})" data-id="${p.id}" class='btn btn-secondary btnSmanji'>-</button>
                                             <input type='text' name='korpaProizvodKolicina${p.id}' class='btn btn-secondary' id='korpaProizvodKolicina${p.id}' disabled='disabled' size='1' value='${p.kolicina}' />
                                         <button id="povecaj${p.id}" onclick="povecaj(${p.id})" data-id="${p.id}" class='btn btn-secondary btnPovecaj'>+</button>
