@@ -517,8 +517,6 @@ function ispisKorpe() {
                             ukupno += proizvod.cena.trenutnaCena * p.kolicina;
 
                             ispisDivFinalnaCena(ukupno);
-                            console.log(ukupno);
-                         
                     }
             }
         }
